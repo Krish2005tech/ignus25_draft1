@@ -7,7 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-./src/assets/hero_video.mp4
+#ignore the video file
+*.mp4
 
 node_modules
 dist

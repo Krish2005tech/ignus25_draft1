@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Smooth Scroll Links */}
+            {/* Smooth Scroll Links
             <nav>
                 <ul>
                     <li>
@@ -44,7 +44,7 @@ const Home = () => {
                         </Link>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
 
             {/* About Us Section */}
             <Element name="about-us">
