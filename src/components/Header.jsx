@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './Header.css';
+import ignus_logo from '../assets/ignus_logo.png';
 
 const Header = () => {
   const handleRegisterClick = () => {
@@ -15,7 +16,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <NavLink to="/" end>
-          Logo
+          <img src={ignus_logo} alt="Ignus_Logo" className="logo-img" ></img>
         </NavLink>
       </div>
       <nav className="nav-links">

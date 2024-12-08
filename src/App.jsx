@@ -1,42 +1,46 @@
-import { useState,useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import wave from './assets/wave_no_bg.png'
+import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 
-// setup router
-import { Outlet } from 'react-router-dom'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [loading, setLoading] = useState(true);
-
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    // Simulate a loading period
-    const timer = setTimeout(() => setLoading(false), 3000); // Adjust the time as needed
-    return () => clearTimeout(timer);
+    // Show the loader for 5 seconds
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+      setIsTransitioning(true); // Start the ripple transition
+    }, 5000);
+
+    // End the ripple transition after 2 seconds
+    const transitionTimer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 7000);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearTimeout(transitionTimer);
+    };
   }, []);
 
   return (
     <div className="App">
-      {loading ? (
-        <div className="loading-screen">
+      {isLoading && (
+        <div id="loader-screen">
           <div className="loader"></div>
         </div>
-      ) : (
-        <div className="wave-transition">
-         <img src={wave} className="wave" alt="wave" />
-          <div className="main-page">
-           <Header/>
-            <Outlet/>
-            <Footer/>
-            
-          </div>
+      )}
+      {isTransitioning && <div id="ripple-mask"></div>}
+      {!isLoading && !isTransitioning && (
+        <div className="main-page">
+          <Header />
+          <Outlet />
+          <Footer />
         </div>
       )}
     </div>

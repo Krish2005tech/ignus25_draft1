@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #282c34;
+    background-color: #536c9f;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -18,16 +18,29 @@
     font-weight: bold;
     color: #61dafb; /* React-themed blue */
     text-decoration: none;
+    display: flex;
+    align-items: center;
+
   }
   
   .logo a:hover {
     color: #21a1f1; /* Slight hover effect */
   }
+
+  .logo img {
+    width: 4rem;
+    height: auto;
+    margin-right: 0.5rem;
+    /* border: 0.1px solid white; */
+    /* border-radius: 50%; */
+    filter: invert(86%) sepia(100%) saturate(0%) hue-rotate(359deg) brightness(106%) contrast(101%);
+  }
   
+
   /* Navigation Links */
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 4rem;
   }
   
   .nav-links a {
@@ -71,4 +84,3 @@
     background-color: #e6361a; /* Even darker on click */
     transform: scale(0.95);
   }
-  
