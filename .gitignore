@@ -9,6 +9,8 @@ lerna-debug.log*
 
 #ignore the video file
 *.mp4
+src/assets/hero_video.mp4
+
 
 node_modules
 dist
