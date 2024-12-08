@@ -2,8 +2,8 @@ import React from "react";
 
 const CA = () => {
     return (
-        <div>
-        <h1>Events</h1>
+        <div style={{ height: "30vh",margin:"40vh" }}>
+        <h1>CA</h1>
         </div>
     );
     }

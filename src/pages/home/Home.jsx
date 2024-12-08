@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, Element } from "react-scroll";  // Import from react-scroll
 import "./Home.css";
-import hero_video from "../assets/hero_video.mp4";
-import HeroSvg from "../assets/IGNUS 25@2x.svg";
+import hero_video from "D:/College/Semester  (4)/ignus website/hero_video.mp4"
+
+import HeroSvg from "../../assets/IGNUS 25@2x.svg";
 
 const Home = () => {
     return (
