@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Full-page loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Circular loader */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid white;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1001; /* Above wave transition */
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wave transition */
+.wave-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(101, 101, 183); /* Initial background matches loading screen */
+  animation: bg-fade 3s ease-in-out forwards; /* Background fades with the wave animation */
+  overflow: hidden;
+  z-index: 1001; /* Above loading screen */
+}
+
+/* Wave element */
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Slightly larger than screen for smooth transition */
+  height: 100%;
+  animation: wave-swipe 3s ease-in-out forwards;
+}
+
+/* Wave swipe animation */
+@keyframes wave-swipe {
+  from {
+    transform: translateX(-100%); /* Start off-screen on the left */
+  }
+  to {
+    transform: translateX(100%); /* End off-screen on the right */
+  }
+}
+
+/* Background fade animation */
+@keyframes bg-fade {
+  from {
+    background-color: rgb(101, 101, 183);
+  }
+  to {
+    background-color: rgb(53, 53, 22); /* Matches the main page's background color */
+  }
+}
+
+/* Main page content */
+.main-page {
+  position: relative; /* Ensure it's above the wave and loading screen */
+  /* background-color: yellow; */
+  opacity: 0; /* Start fully transparent */
+  animation: fade-in 1s ease-in-out 3s forwards; /* Fade in after wave animation ends */
+  z-index: 1002; /* Above all animations */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

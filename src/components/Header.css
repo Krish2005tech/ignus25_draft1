@@ -1,0 +1,74 @@
+/* Header Container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #282c34;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #61dafb; /* React-themed blue */
+    text-decoration: none;
+  }
+  
+  .logo a:hover {
+    color: #21a1f1; /* Slight hover effect */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #61dafb; /* React-themed blue */
+  }
+  
+  /* Active link styling */
+  .nav-links .active {
+    font-weight: bold;
+    color: #61dafb;
+    border-bottom: 2px solid #61dafb; /* Adds an underline to the active link */
+  }
+  
+  /* Register Button */
+  .register-btn {
+    background-color: #ff5733; /* Bold orange-red */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .register-btn:hover {
+    background-color: #ff3d20; /* Darker shade for hover */
+    transform: scale(1.05); /* Slight scaling effect */
+  }
+  
+  .register-btn:active {
+    background-color: #e6361a; /* Even darker on click */
+    transform: scale(0.95);
+  }
+  
