@@ -12,6 +12,12 @@ body {
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
+/* Global styles */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 /* Hero Section Container */
 .hero-video {
   position: relative;
@@ -29,9 +35,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover; /* Ensures the video covers the entire area */
-  opacity: 0.3; /* 50% transparency */
+  opacity: 0.3; /* 30% transparency */
   z-index: -1; /* Push video behind other elements */
 }
 
@@ -48,5 +54,113 @@ body {
   margin: 0 auto;
   max-width: 90%; /* Adjust width based on responsiveness */
   height: auto; /* Maintain aspect ratio */
+}
 
+/* General Section Style */
+section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* About Us Section */
+#about-us {
+  background-color: #f4f4f4;
+}
+
+/* Theme Section */
+#theme {
+  background-color: #e0f7fa;
+}
+
+/* Stats Section */
+#stats {
+  background-color: #f9fbe7;
+}
+
+/* Prakriti Section */
+#prakriti {
+  background-color: #c8e6c9;
+}
+
+/* Contact Us Section */
+#contact-us {
+  background-color: #ffeb3b;
+}
+
+/* Section Content */
+.scroll-section {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Section Title */
+.scroll-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Section Paragraph */
+.scroll-section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Smooth Scroll Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-svg {
+    max-width: 70%;
+  }
+
+  .scroll-section h2 {
+    font-size: 28px;
+  }
+
+  .scroll-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }
