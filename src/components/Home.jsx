@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <div class="hero-video">
-            <video  src={hero_video}autoplay muted loop className="bg-video">
+            <video  src={hero_video} autoplay muted loop className="bg-video">
 
                     {/* <source src={hero_video} /> */}
                     </video>
