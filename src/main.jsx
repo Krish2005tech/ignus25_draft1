@@ -9,6 +9,7 @@ import Workshop from './pages/Workshop.jsx'
 import Prakriti from './pages/Prakriti.jsx'
 import CA from './pages/CA.jsx'
 import PastSponsors from './pages/PastSponsors.jsx'
+import Register from './components/register/Register.jsx'
 
 import { RouterProvider,createBrowserRouter,createRoutesFromElements,Route } from 'react-router-dom'
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="prakriti" element={<Prakriti />} />
       <Route path="ca" element={<CA />} />
       <Route path="past-sponsors" element={<PastSponsors />} />
+      <Route path="register" element={<Register />} />
       {/* <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} /> */}
     </Route>
